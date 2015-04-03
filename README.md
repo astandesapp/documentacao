@@ -2,8 +2,6 @@
 ==============
 Este documento tem como objetivo orientar o desenvolvedor na hora de implementar a API V1 do Astandes, habilitando sua aplicação a enviar e receber SMS programaticamente.
 
- 
-
 **Autenticação**
 ---------------
 Todas as rotas e APIs aqui descritas necessitam de um cabeçhalho de autenticação contendo a chave da API da sua conta. Esta chave pode ser obtida através do menu Perfil contido dentro do painel administrativo da sua conta. Exemplo de autenticação utilizando o cabeçalho Authorization:

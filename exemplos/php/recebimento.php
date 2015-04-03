@@ -11,8 +11,6 @@ Exemplo JSON de um SMS recebido:
 Exemplo JSON Status de uma mensagem enviada
 {"device":{"_id":"54fb309c01e1d8e2222222","phone":"0119999999","firstname":"aaaaaaaaaa","lastname":"bbbbbbbbbbbb","description":"","notification":"","email":"","created":"2015-03-07T17:08:44.930Z","updated":"2015-03-07T17:09:22.703Z","attached":true,"rand":0.6807142987381667},"phone":"011999994444","text":"teste","notification":"http://meudominio.com.br/rcv.php","identifier":"12345","maxtries":1,"debug":false,"status":201,"created":"2015-03-26T04:12:23.501Z","updated":"2015-03-26T04:12:23.501Z","history":[{"status":201,"date":"2015-03-26T04:12:23.501Z"}],"ttl":"2015-03-27T04:12:23.501Z","_id":"551387273559548c5de6413d"}
 
-
-
 Código de status das mesagens
 
 Os status númericos de cada SMS enviado ou recebido podem ser consultados na tabela abaixo.
@@ -50,29 +48,17 @@ Erros
 * 511: créditos do Astandes insuficientes
 */
 
-// Recebe o JSON  
-$data = json_decode(file_get_contents('php://input'));
-
+// Recebe o JSON
+$data = json_decode(file_get_contents("php://input"));
 
 // Salva as mensagens recebidas no arquivo rcv.log
-if($data->status == "204"){
-
-$rcv_sms="Origin: $data->phone   Mensagem: $data->text \n";
-
-file_put_contents ("/tmp/rcv.log",$rcv_sms,FILE_APPEND);
+if($data->status === 204){
+  $rcv_sms="Origin: {$data->phone} Mensagem: {$data->text} \n";
+  file_put_contents ("/tmp/rcv.log", $rcv_sms, FILE_APPEND);
 }
-
 
 // Status de Mensagem enviada
-if($data->status == "203"){
-
-$rcv_sms="Mensagem ID: $data->_id    ID enviado: $data->identifier    Status da Mensagem: $data->status \n";
-
-file_put_contents ("/tmp/rcv.log",$rcv_sms,FILE_APPEND);
+if($data->status === 203){
+  $rcv_sms = "Mensagem ID: {$data->_id} ID enviado: {$data->identifier} Status da Mensagem: {$data->status} \n";
+  file_put_contents ("/tmp/rcv.log", $rcv_sms, FILE_APPEND);
 }
-
-
-
-?>
-
-
