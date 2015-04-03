@@ -60,6 +60,7 @@ Exemplo de resposta:
 
  **Alterando um device**
 **Listando devices**
+
 Método: GET
 Rota: https://astandes.com.br/api/v1/device
 Exemplo de requisição:
@@ -69,7 +70,9 @@ Exemplo de requisição:
      -H "Authorization: tokenv1
     ABBdC1SZ1MZRmwMQelUemcLPAQgb5969uTnkRwImaeEW57lD/33Ue/3Wsx..."
 
+
 Parâmetros disponíveis para a query da URL:
+
 Campo| Descrição| Tipo| Requerido
 --------|------------|------|-------------
 skip| Número de registros para pular antes de retornar| integer| Não
@@ -80,6 +83,8 @@ created_start| Filtrar apenas registros criados depois desta data| ISODate| Não
 created_stop| Filtrar apenas registros criados antes desta data| ISODate| Não
 attached| Buscar por registros pareados| boolean| Não
 sort| Nome do campo para ordenar o resultado| string| Não
+
+
 Exemplo de retorno:
 
     {
@@ -99,7 +104,9 @@ Exemplo de retorno:
     	
 
 **Listando devices**
+
 Método: GET
+
 Rota: https://astandes.com.br/api/v1/device
 Exemplo de requisição:
 
@@ -108,7 +115,9 @@ Exemplo de requisição:
      -H "Authorization: tokenv1
     ABBdC1SZ1MZRmwMQelUemcLPAQgb5969uTnkRwImaeEW57lD/33Ue/3Wsx..."
 
+
 Parâmetros disponíveis para a query da URL:
+
 Campo| Descrição| Tipo| Requerido
 --------|------------|------|-------------
 skip| Número de registros para pular antes de retornar| integer| Não
@@ -119,6 +128,7 @@ created_start| Filtrar apenas registros criados depois desta data| ISODate| Não
 created_stop| Filtrar apenas registros criados antes desta data| ISODate| Não
 attached| Buscar por registros pareados| boolean| Não
 sort| Nome do campo para ordenar o resultado| string| Não
+
 Exemplo de retorno:
 
     {
