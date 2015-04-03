@@ -18,12 +18,12 @@ Nesse arquivos você pode configurar:
 |Parametros|Comentário|
 --------------|--------------|
 |[astandes]||
-|api_key="xxx" |#API key  localizado na interface web em Perfil do usuário.
-|device_id="yyy"| #Aparelho ID, localizado na interface web em Aparelhos ID do aparelho que responderá as mensagens 
-|log_file="/tmp/quiz.log"| # Arquivo de Log
+|api_key="xxx" |API key  localizado na interface web em Perfil do usuário.
+|device_id="yyy"|Aparelho ID, localizado na interface web em Aparelhos ID do aparelho que responderá as mensagens 
+|log_file="/tmp/quiz.log"| Arquivo de Log
 |debug=0|  #Modo debug 0 Desativado e 1 Ativado
 |[quiz]|
 |mensagem="Auto resposta"|Mensagem padrão
-|log_file="/tmp/quiz.log"| # Arquivo de Log
+|log_file="/tmp/quiz.log"|Arquivo de Log
 |debug=0| #Modo debug 0 Desativado e 1 Ativado
 
